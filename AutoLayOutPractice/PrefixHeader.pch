@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  AutoLayOutPractice
+//
+//  Created by R_style_Man on 14/12/20.
+//  Copyright (c) 2014年 R_style_Man. All rights reserved.
+//
+
+#ifndef AutoLayOutPractice_PrefixHeader_pch
+#define AutoLayOutPractice_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define MAS_SHORTHAND
+
+//#define WEAKSELF typeof(self) __weak weakSelf = self;
+
+#endif

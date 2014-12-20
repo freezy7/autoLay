@@ -1,0 +1,13 @@
+PODS:
+  - Masonry (0.5.3)
+  - MMPlaceHolder (1.6)
+
+DEPENDENCIES:
+  - Masonry
+  - MMPlaceHolder
+
+SPEC CHECKSUMS:
+  Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
+  MMPlaceHolder: 8fe70118604dfd117155ff3f6e8492965e338443
+
+COCOAPODS: 0.35.0

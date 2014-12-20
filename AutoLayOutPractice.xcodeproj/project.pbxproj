@@ -14,6 +14,8 @@
 		6F250C541A459BA2005B844A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F250C531A459BA2005B844A /* Images.xcassets */; };
 		6F250C571A459BA2005B844A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F250C551A459BA2005B844A /* LaunchScreen.xib */; };
 		6F250C631A459BA2005B844A /* AutoLayOutPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F250C621A459BA2005B844A /* AutoLayOutPracticeTests.m */; };
+		6F250C721A45C4EE005B844A /* UIView+Masonry_LJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F250C711A45C4EE005B844A /* UIView+Masonry_LJC.m */; };
+		8C2DACA69D66B4193E9FD5FA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81976C8E3B1232ADDECC4E0D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,12 @@
 		6F250C5C1A459BA2005B844A /* AutoLayOutPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayOutPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F250C611A459BA2005B844A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F250C621A459BA2005B844A /* AutoLayOutPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayOutPracticeTests.m; sourceTree = "<group>"; };
+		6F250C6C1A459CEF005B844A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6F250C701A45C4EE005B844A /* UIView+Masonry_LJC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Masonry_LJC.h"; sourceTree = "<group>"; };
+		6F250C711A45C4EE005B844A /* UIView+Masonry_LJC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Masonry_LJC.m"; sourceTree = "<group>"; };
+		81976C8E3B1232ADDECC4E0D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE9501DA5C36B9F4ED8B841 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FB65D4F0D043F16285F71893 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2DACA69D66B4193E9FD5FA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64D6C387C3724157DC9C83D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDE9501DA5C36B9F4ED8B841 /* Pods.debug.xcconfig */,
+				FB65D4F0D043F16285F71893 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F250C3A1A459BA2005B844A = {
 			isa = PBXGroup;
 			children = (
 				6F250C451A459BA2005B844A /* AutoLayOutPractice */,
 				6F250C5F1A459BA2005B844A /* AutoLayOutPracticeTests */,
 				6F250C441A459BA2005B844A /* Products */,
+				64D6C387C3724157DC9C83D6 /* Pods */,
+				9DD574E99607CD599210ECC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +105,8 @@
 				6F250C4B1A459BA2005B844A /* AppDelegate.m */,
 				6F250C4D1A459BA2005B844A /* ViewController.h */,
 				6F250C4E1A459BA2005B844A /* ViewController.m */,
+				6F250C701A45C4EE005B844A /* UIView+Masonry_LJC.h */,
+				6F250C711A45C4EE005B844A /* UIView+Masonry_LJC.m */,
 				6F250C501A459BA2005B844A /* Main.storyboard */,
 				6F250C531A459BA2005B844A /* Images.xcassets */,
 				6F250C551A459BA2005B844A /* LaunchScreen.xib */,
@@ -98,6 +120,7 @@
 			children = (
 				6F250C471A459BA2005B844A /* Info.plist */,
 				6F250C481A459BA2005B844A /* main.m */,
+				6F250C6C1A459CEF005B844A /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +142,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9DD574E99607CD599210ECC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81976C8E3B1232ADDECC4E0D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F250C661A459BA2005B844A /* Build configuration list for PBXNativeTarget "AutoLayOutPractice" */;
 			buildPhases = (
+				DA321CE2D6FF47202E6A554E /* Check Pods Manifest.lock */,
 				6F250C3F1A459BA2005B844A /* Sources */,
 				6F250C401A459BA2005B844A /* Frameworks */,
 				6F250C411A459BA2005B844A /* Resources */,
+				0483E58CAA7044BC22769B21 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,11 +247,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0483E58CAA7044BC22769B21 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA321CE2D6FF47202E6A554E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F250C3F1A459BA2005B844A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F250C721A45C4EE005B844A /* UIView+Masonry_LJC.m in Sources */,
 				6F250C4F1A459BA2005B844A /* ViewController.m in Sources */,
 				6F250C4C1A459BA2005B844A /* AppDelegate.m in Sources */,
 				6F250C491A459BA2005B844A /* main.m in Sources */,
@@ -343,8 +410,11 @@
 		};
 		6F250C671A459BA2005B844A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDE9501DA5C36B9F4ED8B841 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AutoLayOutPractice/PrefixHeader.pch";
 				INFOPLIST_FILE = AutoLayOutPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,8 +423,11 @@
 		};
 		6F250C681A459BA2005B844A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB65D4F0D043F16285F71893 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AutoLayOutPractice/PrefixHeader.pch";
 				INFOPLIST_FILE = AutoLayOutPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +487,7 @@
 				6F250C681A459BA2005B844A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F250C691A459BA2005B844A /* Build configuration list for PBXNativeTarget "AutoLayOutPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +496,7 @@
 				6F250C6B1A459BA2005B844A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
