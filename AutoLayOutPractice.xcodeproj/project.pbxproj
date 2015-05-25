@@ -16,6 +16,7 @@
 		6F250C631A459BA2005B844A /* AutoLayOutPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F250C621A459BA2005B844A /* AutoLayOutPracticeTests.m */; };
 		6F250C721A45C4EE005B844A /* UIView+Masonry_LJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F250C711A45C4EE005B844A /* UIView+Masonry_LJC.m */; };
 		8C2DACA69D66B4193E9FD5FA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81976C8E3B1232ADDECC4E0D /* libPods.a */; };
+		A53FDBF51B12F99D0040E2E0 /* AutoLayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53FDBF41B12F99D0040E2E0 /* AutoLayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		6F250C701A45C4EE005B844A /* UIView+Masonry_LJC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Masonry_LJC.h"; sourceTree = "<group>"; };
 		6F250C711A45C4EE005B844A /* UIView+Masonry_LJC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Masonry_LJC.m"; sourceTree = "<group>"; };
 		81976C8E3B1232ADDECC4E0D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53FDBF31B12F99D0040E2E0 /* AutoLayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayViewController.h; sourceTree = "<group>"; };
+		A53FDBF41B12F99D0040E2E0 /* AutoLayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayViewController.m; sourceTree = "<group>"; };
 		EDE9501DA5C36B9F4ED8B841 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB65D4F0D043F16285F71893 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +108,8 @@
 				6F250C4B1A459BA2005B844A /* AppDelegate.m */,
 				6F250C4D1A459BA2005B844A /* ViewController.h */,
 				6F250C4E1A459BA2005B844A /* ViewController.m */,
+				A53FDBF31B12F99D0040E2E0 /* AutoLayViewController.h */,
+				A53FDBF41B12F99D0040E2E0 /* AutoLayViewController.m */,
 				6F250C701A45C4EE005B844A /* UIView+Masonry_LJC.h */,
 				6F250C711A45C4EE005B844A /* UIView+Masonry_LJC.m */,
 				6F250C501A459BA2005B844A /* Main.storyboard */,
@@ -289,6 +294,7 @@
 				6F250C4F1A459BA2005B844A /* ViewController.m in Sources */,
 				6F250C4C1A459BA2005B844A /* AppDelegate.m in Sources */,
 				6F250C491A459BA2005B844A /* main.m in Sources */,
+				A53FDBF51B12F99D0040E2E0 /* AutoLayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

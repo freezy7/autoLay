@@ -23,6 +23,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor lightGrayColor];
     
+    UIBarButtonItem* rightBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(donePressed:)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    
+    //NSAssert(false, @"big man");
+    
     WS(ws);
     UIView* sv = [UIView new];
     //[sv showPlaceHolder];
@@ -179,6 +184,16 @@
 //    }];
     
     
+    
+}
+
+-(void)donePressed:(UIBarButtonItem*)btn
+{
+    //[self prepareForSegue:@"AutoLayViewController" sender:btn];
+    [self performSegueWithIdentifier:@"AutoLayViewControllerSegue" sender:btn];
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     
 }
 
