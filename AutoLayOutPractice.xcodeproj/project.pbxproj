@@ -17,6 +17,9 @@
 		6F250C721A45C4EE005B844A /* UIView+Masonry_LJC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F250C711A45C4EE005B844A /* UIView+Masonry_LJC.m */; };
 		8C2DACA69D66B4193E9FD5FA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81976C8E3B1232ADDECC4E0D /* libPods.a */; };
 		A53FDBF51B12F99D0040E2E0 /* AutoLayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53FDBF41B12F99D0040E2E0 /* AutoLayViewController.m */; };
+		A5D8A4511B14564D004ABF4D /* FontTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D8A4501B14564D004ABF4D /* FontTableViewController.m */; };
+		A5D8A4541B1463AE004ABF4D /* SCFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D8A4531B1463AE004ABF4D /* SCFontViewController.m */; };
+		A5D8A4581B146896004ABF4D /* SCFontDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D8A4571B146896004ABF4D /* SCFontDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,12 @@
 		81976C8E3B1232ADDECC4E0D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53FDBF31B12F99D0040E2E0 /* AutoLayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayViewController.h; sourceTree = "<group>"; };
 		A53FDBF41B12F99D0040E2E0 /* AutoLayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayViewController.m; sourceTree = "<group>"; };
+		A5D8A44F1B14564D004ABF4D /* FontTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontTableViewController.h; sourceTree = "<group>"; };
+		A5D8A4501B14564D004ABF4D /* FontTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontTableViewController.m; sourceTree = "<group>"; };
+		A5D8A4521B1463AE004ABF4D /* SCFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFontViewController.h; sourceTree = "<group>"; };
+		A5D8A4531B1463AE004ABF4D /* SCFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFontViewController.m; sourceTree = "<group>"; };
+		A5D8A4561B146896004ABF4D /* SCFontDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFontDetailViewController.h; sourceTree = "<group>"; };
+		A5D8A4571B146896004ABF4D /* SCFontDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFontDetailViewController.m; sourceTree = "<group>"; };
 		EDE9501DA5C36B9F4ED8B841 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB65D4F0D043F16285F71893 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +113,7 @@
 		6F250C451A459BA2005B844A /* AutoLayOutPractice */ = {
 			isa = PBXGroup;
 			children = (
+				A5D8A4551B1463B7004ABF4D /* Downloadable Fonts */,
 				6F250C4A1A459BA2005B844A /* AppDelegate.h */,
 				6F250C4B1A459BA2005B844A /* AppDelegate.m */,
 				6F250C4D1A459BA2005B844A /* ViewController.h */,
@@ -153,6 +163,19 @@
 				81976C8E3B1232ADDECC4E0D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5D8A4551B1463B7004ABF4D /* Downloadable Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A5D8A44F1B14564D004ABF4D /* FontTableViewController.h */,
+				A5D8A4501B14564D004ABF4D /* FontTableViewController.m */,
+				A5D8A4521B1463AE004ABF4D /* SCFontViewController.h */,
+				A5D8A4531B1463AE004ABF4D /* SCFontViewController.m */,
+				A5D8A4561B146896004ABF4D /* SCFontDetailViewController.h */,
+				A5D8A4571B146896004ABF4D /* SCFontDetailViewController.m */,
+			);
+			name = "Downloadable Fonts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +316,10 @@
 				6F250C721A45C4EE005B844A /* UIView+Masonry_LJC.m in Sources */,
 				6F250C4F1A459BA2005B844A /* ViewController.m in Sources */,
 				6F250C4C1A459BA2005B844A /* AppDelegate.m in Sources */,
+				A5D8A4541B1463AE004ABF4D /* SCFontViewController.m in Sources */,
 				6F250C491A459BA2005B844A /* main.m in Sources */,
+				A5D8A4511B14564D004ABF4D /* FontTableViewController.m in Sources */,
+				A5D8A4581B146896004ABF4D /* SCFontDetailViewController.m in Sources */,
 				A53FDBF51B12F99D0040E2E0 /* AutoLayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -187,6 +187,11 @@
     
 }
 
+-(IBAction)fontSegue:(id)sender
+{
+    [self performSegueWithIdentifier:@"FontTableViewSegue" sender:sender];
+}
+
 -(void)donePressed:(UIBarButtonItem*)btn
 {
     //[self prepareForSegue:@"AutoLayViewController" sender:btn];
