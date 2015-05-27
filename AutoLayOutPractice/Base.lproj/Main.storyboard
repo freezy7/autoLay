@@ -122,6 +122,9 @@
                                 <state key="normal" title="Download Font">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleDownloadPressed:" destination="drD-qT-iUj" eventType="touchUpInside" id="uJ9-Il-tRE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6T-0a-Jep">
                                 <rect key="frame" x="16" y="182" width="288" height="163"/>
@@ -129,6 +132,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-vF-e70">
+                                <rect key="frame" x="16" y="149" width="288" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -136,6 +142,7 @@
                     <connections>
                         <outlet property="detailDescriptorLabel" destination="ZZD-0H-pPv" id="c68-Y4-HB7"/>
                         <outlet property="downloadButton" destination="bpX-CL-e4O" id="Vrn-jX-3oG"/>
+                        <outlet property="downloadProgressBar" destination="kHA-vF-e70" id="0sE-4t-bRu"/>
                         <outlet property="sampleTextLabel" destination="t6T-0a-Jep" id="yQy-pZ-q2m"/>
                     </connections>
                 </viewController>

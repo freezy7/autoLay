@@ -31,7 +31,19 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    [self requestDownloadFontList];
+    // 解压字体列表数据
+    NSData* data = [[NSMutableData alloc] initWithContentsOfFile:[self getFilePath]];
+    NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+    NSMutableDictionary* fontData = [unarchiver decodeObjectForKey:@"FontData"];
+    
+    [unarchiver finishDecoding];
+    if (fontData) {
+        _fontList = [fontData copy];
+    }else{
+        [self requestDownloadFontList];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +72,7 @@
 -(void)fontListDownloadComplete:(NSArray*)fontList
 {
     // Need to reorganise array into dictionary
+    // 获取后台的字体列表，注意用法
     NSMutableDictionary* fontFamilies = [NSMutableDictionary new];
     for (UIFontDescriptor* descriptor in fontList) {
         NSString* fontFamilyName = [descriptor objectForKey:UIFontDescriptorFamilyAttribute];
@@ -72,7 +85,25 @@
     }
     _fontList = [fontFamilies copy];
     
+    NSMutableData *data = [[NSMutableData alloc] init];
+    
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    
+    [archiver encodeObject:_fontList forKey:@"FontData"];
+    
+    [archiver finishEncoding];
+    
+    [data writeToFile:[self getFilePath] atomically:YES];
+    
+    
+    
     [self.tableView reloadData];
+}
+
+-(NSString*)getFilePath
+{
+    NSArray* array = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    return [[array objectAtIndex:0] stringByAppendingPathComponent:@"font"];
 }
 
 #pragma mark - Table view data source

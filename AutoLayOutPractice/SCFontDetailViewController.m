@@ -7,6 +7,7 @@
 //
 
 #import "SCFontDetailViewController.h"
+#import <CoreText/CoreText.h>
 
 @interface SCFontDetailViewController ()
 
@@ -17,11 +18,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self updateView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)handleDownloadPressed:(id)sender
+{
+    self.downloadProgressBar.hidden = NO;
+    CTFontDescriptorMatchFontDescriptorsWithProgressHandler((CFArrayRef)@[_fontDescriptor], NULL, ^bool(CTFontDescriptorMatchingState state, CFDictionaryRef progressParameter) {
+        double progressValue = [[(__bridge NSDictionary*)progressParameter objectForKey:(id)kCTFontDescriptorMatchingPercentage] doubleValue];
+        if (state == kCTFontDescriptorMatchingDidFinish) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.downloadProgressBar.hidden = YES;
+                [self updateView];
+            });
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.downloadProgressBar.progress = progressValue;
+            });
+        }
+        return (bool)YES;
+    });
+}
+
+-(void)updateView
+{
+    NSString* fontName = [self.fontDescriptor objectForKey:UIFontDescriptorNameAttribute];
+    self.title = fontName;
+    
+    UIFont* font = [UIFont fontWithName:fontName size:26.f];
+    if (font && [font.fontName isEqualToString:fontName]) {
+        self.sampleTextLabel.font = font;
+        self.downloadButton.enabled = NO;
+        self.detailDescriptorLabel.text = @"Font avaliable";
+    }else{
+        self.sampleTextLabel.font = [UIFont systemFontOfSize:font.pointSize];
+        self.downloadButton.enabled = YES;
+        self.detailDescriptorLabel.text = @"This font is not yet download";
+    }
 }
 
 /*

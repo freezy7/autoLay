@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptorLabel;
 @property (weak, nonatomic) IBOutlet UIButton *downloadButton;
 @property (weak, nonatomic) IBOutlet UILabel *sampleTextLabel;
+@property (weak, nonatomic) IBOutlet UIProgressView *downloadProgressBar;
 
 @end
